@@ -1,0 +1,23 @@
+CRITICAL - 2022-11-04 01:50:16 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Profile.php on line 20.
+ 1 APPPATH\Controllers\Profile.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Profile.php', 20, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-04 01:52:34 --> Argument 2 passed to view() must be of the type array, null given, called in C:\wamp64\www\CIProfil\app\Controllers\Profile.php on line 45
+in SYSTEMPATH\Common.php on line 1120.
+ 1 APPPATH\Controllers\Profile.php(45): view('admin/profile', null)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-04 01:52:47 --> Cannot use [] for reading
+in APPPATH\Controllers\Profile.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->index()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
