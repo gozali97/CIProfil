@@ -1,0 +1,668 @@
+ERROR - 2022-11-14 02:14:10 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'u1032547_bumdes...', 3306, '', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(22): App\Models\ProfileModel->tampilData()
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->index()
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(22): App\Models\ProfileModel->tampilData()
+#5 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->index()
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-14 02:14:10 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mst_profile`', [], false)
+ 3 APPPATH\Models\ProfileModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\FrontProfil.php(22): App\Models\ProfileModel->tampilData()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 02:25:22 --> Attempt to read property "id" on array
+in APPPATH\Views\front\profil\index.php on line 23.
+ 1 APPPATH\Views\front\profil\index.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'APPPATH\\Views\\front\\profil\\index.php', 23)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/index', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(28): view('front/profil/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 02:31:17 --> Call to a member function ambilData() on array
+in APPPATH\Controllers\FrontProfil.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 02:35:46 --> Invalid file: front/profil/detail.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/profil/detail.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 3 APPPATH\Controllers\FrontProfil.php(52): view('front/profil/detail', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 03:10:57 --> Undefined variable $logo
+in APPPATH\Views\front\profil\detail.php on line 13.
+ 1 APPPATH\Views\front\profil\detail.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $logo', 'APPPATH\\Views\\front\\profil\\detail.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(72): view('front/profil/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('4')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 03:11:25 --> Attempt to read property "logo" on array
+in APPPATH\Views\front\profil\detail.php on line 13.
+ 1 APPPATH\Views\front\profil\detail.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "logo" on array', 'APPPATH\\Views\\front\\profil\\detail.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(72): view('front/profil/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('4')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 03:13:29 --> Undefined variable $foto
+in APPPATH\Views\front\profil\detail.php on line 46.
+ 1 APPPATH\Views\front\profil\detail.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $foto', 'APPPATH\\Views\\front\\profil\\detail.php', 46)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(72): view('front/profil/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('4')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 03:14:01 --> Undefined variable $data
+in APPPATH\Views\front\profil\detail.php on line 46.
+ 1 APPPATH\Views\front\profil\detail.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\front\\profil\\detail.php', 46)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(72): view('front/profil/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('4')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 03:15:00 --> Undefined variable $data
+in APPPATH\Views\front\profil\detail.php on line 42.
+ 1 APPPATH\Views\front\profil\detail.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\front\\profil\\detail.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(72): view('front/profil/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('4')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 03:19:05 --> Undefined variable $data
+in APPPATH\Controllers\FrontProfil.php on line 65.
+ 1 APPPATH\Controllers\FrontProfil.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\FrontProfil.php', 65)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('4')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 03:20:31 --> syntax error, unexpected token ")"
+in APPPATH\Controllers\FrontProfil.php on line 39.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\FrontProfil.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\FrontProfil')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\FrontProfil')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\FrontProfil', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 03:23:25 --> Undefined variable $data
+in APPPATH\Views\front\profil\detail.php on line 42.
+ 1 APPPATH\Views\front\profil\detail.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\front\\profil\\detail.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(71): view('front/profil/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('4')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 03:23:49 --> Undefined variable $data
+in APPPATH\Views\front\profil\detail.php on line 42.
+ 1 APPPATH\Views\front\profil\detail.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\front\\profil\\detail.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(71): view('front/profil/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('4')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-14 21:51:09 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'u1032547_bumdes...', 3306, '', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\Home.php(26): App\Models\ProfileModel->tampilData()
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\CIProfil\app\Controllers\Home.php(26): App\Models\ProfileModel->tampilData()
+#5 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-11-14 21:51:09 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mst_profile`', [], false)
+ 3 APPPATH\Models\ProfileModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(26): App\Models\ProfileModel->tampilData()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 22:20:56 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::join()
+in APPPATH\Models\ProfileModel.php on line 62.
+ 1 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('5')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-14 22:24:01 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(62): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('5')
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-11-14 22:24:01 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE `id` = \'5\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE `id` = \'5\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE `id` = \'5\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE `id` = :id:', [...], false)
+ 5 APPPATH\Models\ProfileModel.php(62): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 6 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('5')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-14 22:24:16 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(63): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('5')
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-11-14 22:24:16 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE `id` = \'5\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE `id` = \'5\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE `id` = \'5\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE `id` = :id:', [...], false)
+ 5 APPPATH\Models\ProfileModel.php(63): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('5')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-14 22:24:41 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(63): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('5')
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-11-14 22:24:41 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE `id` = \'5\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE `id` = \'5\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE `id` = \'5\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE `id` = :id:', [...], false)
+ 5 APPPATH\Models\ProfileModel.php(63): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 6 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('5')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-14 22:25:20 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(64): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('5')
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-11-14 22:25:20 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE `id` = \'5\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE `id` = \'5\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE `id` = \'5\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE `id` = :id:', [...], false)
+ 5 APPPATH\Models\ProfileModel.php(64): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('5')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-14 22:28:35 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('5')
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-11-14 22:28:35 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `mst_profile`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `mst_profile`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `mst_profile`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mst_profile`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 APPPATH\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('5')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-14 22:30:08 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('5')
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-11-14 22:30:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `mst_profile`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `mst_profile`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `mst_profile`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mst_profile`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 APPPATH\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('5')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-14 22:30:19 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4 in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('5')
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-11-14 22:30:19 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 APPPATH\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('5')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-14 22:31:48 --> mysqli_sql_exception: Unknown column 'mst_produk.id_profile' in 'where clause' in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(64): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('5')
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-11-14 22:31:48 --> Unknown column 'mst_produk.id_profile' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `mst_profile`
+WHERE `mst_produk`.`id_profile` = \'5\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `mst_profile`
+WHERE `mst_produk`.`id_profile` = \'5\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `mst_profile`
+WHERE `mst_produk`.`id_profile` = \'5\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mst_profile`
+WHERE `mst_produk`.`id_profile` = :mst_produk.id_profile:', [...], false)
+ 5 APPPATH\Models\ProfileModel.php(64): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 6 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('5')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-14 22:32:47 --> mysqli_sql_exception: Unknown column 'id_profile' in 'where clause' in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(64): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('5')
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-11-14 22:32:47 --> Unknown column 'id_profile' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `mst_profile`
+WHERE `id_profile` = \'5\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `mst_profile`
+WHERE `id_profile` = \'5\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `mst_profile`
+WHERE `id_profile` = \'5\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mst_profile`
+WHERE `id_profile` = :id_profile:', [...], false)
+ 5 APPPATH\Models\ProfileModel.php(64): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 6 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('5')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 22:40:59 --> Undefined variable $data
+in APPPATH\Controllers\FrontProfil.php on line 71.
+ 1 APPPATH\Controllers\FrontProfil.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\FrontProfil.php', 71)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 22:41:53 --> Undefined variable $logo
+in APPPATH\Views\front\profil\detail.php on line 13.
+ 1 APPPATH\Views\front\profil\detail.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $logo', 'APPPATH\\Views\\front\\profil\\detail.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(71): view('front/profil/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 22:41:56 --> Undefined variable $logo
+in APPPATH\Views\front\profil\detail.php on line 13.
+ 1 APPPATH\Views\front\profil\detail.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $logo', 'APPPATH\\Views\\front\\profil\\detail.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(71): view('front/profil/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 22:42:53 --> Undefined variable $logo
+in APPPATH\Views\front\profil\detail.php on line 13.
+ 1 APPPATH\Views\front\profil\detail.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $logo', 'APPPATH\\Views\\front\\profil\\detail.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(71): view('front/profil/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 22:43:01 --> Undefined variable $logo
+in APPPATH\Views\front\profil\detail.php on line 13.
+ 1 APPPATH\Views\front\profil\detail.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $logo', 'APPPATH\\Views\\front\\profil\\detail.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(71): view('front/profil/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('4')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 22:43:44 --> Call to a member function getResult() on array
+in APPPATH\Controllers\FrontProfil.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('4')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 22:44:22 --> Call to a member function getRow() on array
+in APPPATH\Controllers\FrontProfil.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('4')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 22:45:06 --> Undefined variable $logo
+in APPPATH\Views\front\profil\detail.php on line 13.
+ 1 APPPATH\Views\front\profil\detail.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $logo', 'APPPATH\\Views\\front\\profil\\detail.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(71): view('front/profil/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('4')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-14 22:45:56 --> Undefined variable $logo
+in APPPATH\Views\front\profil\detail.php on line 13.
+ 1 APPPATH\Views\front\profil\detail.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $logo', 'APPPATH\\Views\\front\\profil\\detail.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(71): view('front/profil/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('4')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

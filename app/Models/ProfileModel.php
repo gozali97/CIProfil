@@ -45,4 +45,37 @@ class ProfileModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    function tampilData()
+    {
+        return $this->db->table('mst_profile')->get();
+    }
+
+    function ambilData($id)
+    {
+        return $this->db->table('mst_profile')->getWhere(['id' => $id]);
+    }
+
+    function getAll($id)
+    {
+        $builder = $this->db->table('mst_profile');
+        $builder->select('mst_profile.*, mst_produk.*');
+        $builder->join('mst_produk', 'mst_profile.id = mst_produk.id_profile');
+        $builder->where('mst_profile.id', $id);
+        $query = $builder->get();
+
+        return $query->getResultArray();
+    }
+
+    /**
+     *@return self 
+     */
+
+
+    public function setTable($table)
+    {
+        $this->table = $table;
+
+        return $this;
+    }
 }

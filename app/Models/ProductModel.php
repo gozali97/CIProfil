@@ -40,10 +40,10 @@ class ProductModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    function __construct()
-    {
-        $this->db = db_connect();
-    }
+    // function __construct()
+    // {
+    //     $this->db = db_connect();
+    // }
 
     function tampilData()
     {
@@ -68,5 +68,12 @@ class ProductModel extends Model
     function editData($data, $id)
     {
         return $this->db->table('mst_produk')->update($data, ['id' => $id]);
+    }
+
+    public function setTable($table)
+    {
+        $this->table = $table;
+
+        return $this;
     }
 }

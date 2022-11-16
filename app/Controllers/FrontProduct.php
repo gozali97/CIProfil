@@ -2,23 +2,55 @@
 
 namespace App\Controllers;
 
-use CodeIgniter\RESTful\ResourceController;
+use App\Controllers\BaseController;
 use App\Models\ProductModel;
+use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\Session\Session;
 
 class FrontProduct extends ResourceController
 {
-    /**
-     * Return an array of resource objects, themselves in array format
-     *
-     * @return mixed
-     */
+
+    public function __construct()
+    {
+        $this->product =  new ProductModel();
+        $this->pager = \Config\Services::pager();
+
+        // $this->profile->setTable($this->table);
+    }
+
+
     public function index()
     {
-        $produk =  new ProductModel();
         $data = [
-            'tampilProduk' => $produk->tampilData()->getResult()
+            'tampilProduct' => $this->product->tampilData()->getResult(),
+            'productPager' => $this->product->paginate(12, 'product'),
+            'pager' => $this->product->productPager,
         ];
         return view('front/produk/index', $data);
+    }
+
+    public function detail($id = null)
+    {
+
+        $produk = new ProductModel();
+
+        $getProduk = $produk->ambilData($id);
+
+        if (count($getProduk->getResult()) > 0) {
+            $row = $getProduk->getRow();
+            $data = [
+                'id' => $id,
+                'nama' => $row->nama,
+                'id_profile' => $row->id_profile,
+                'foto' => $row->foto,
+                'harga' => $row->harga,
+                'deskripsi' => $row->deskripsi,
+                'status' => $row->status,
+                'kode' => $row->kode,
+            ];
+        }
+
+
+        echo View('admin/product/edit', $data);
     }
 }

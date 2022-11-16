@@ -35,7 +35,10 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Login::index');
+// $routes->get('/',  function () {
+//     return view('front/index');
+// });
+$routes->get('/', 'Home::index');
 
 
 // $routes->get('/logins', function () {
@@ -44,6 +47,7 @@ $routes->get('/', 'Login::index');
 
 
 // auth
+$routes->get('/login', 'Login::index');
 $routes->get('/register', function () {
     return view('front/auth/register');
 });
@@ -70,17 +74,19 @@ $routes->group('/dashboard/product', ['filter' => 'auth'], function ($routes) {
     $routes->get('/', 'Product::index');
 });
 
-$routes->get('/admin/product/create', 'Product::create');
-$routes->post('/admin/product/store', 'Product::store');
-$routes->get('/admin/product/edit/(:num)', 'Product::edit/$1');
-$routes->post('/admin/product/updateData/(:num)', 'Product::updateData/$1');
-$routes->get('/admin/product/hapus/(:num)', 'Product::hapus/$1');
+$routes->get('/admin/product/create', 'Product::create', ['filter' => 'auth']);
+$routes->post('/admin/product/store', 'Product::store', ['filter' => 'auth']);
+$routes->get('/admin/product/edit/(:num)', 'Product::edit/$1', ['filter' => 'auth']);
+$routes->post('/admin/product/updateData/(:num)', 'Product::updateData/$1', ['filter' => 'auth']);
+$routes->get('/admin/product/hapus/(:num)', 'Product::hapus/$1', ['filter' => 'auth']);
 
 
 
 //Frontend
 
-$routes->get('/front/product', 'FrontProduct::index');
+$routes->get('/product', 'FrontProduct::index');
+$routes->get('/profil', 'FrontProfil::index');
+$routes->get('/profil/detail/(:num)', 'FrontProfil::detail/$1');
 
 
 // $routes->group('dashboard', static function ($routes) {

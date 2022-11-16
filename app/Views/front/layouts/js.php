@@ -2,6 +2,8 @@
 <script src="<?= base_url('front/assets/js/tiny-slider.js') ?>"></script>
 <script src="<?= base_url('front/assets/js/glightbox.min.js') ?>"></script>
 <script src="<?= base_url('front/assets/js/main.js') ?>"></script>
+<!-- owl carousel js -->
+<script src="<?= base_url('front/assets/js/owl.carousel.min.js') ?>"></script>
 <script type="text/javascript">
     //========= Hero Slider 
     tns({
@@ -40,5 +42,32 @@
                 items: 6,
             }
         }
+    });
+
+    $(document).ready(function() {
+        $(".carousel-profile").owlCarousel({
+            rewind: true,
+            margin: 20,
+            responsiveClass: true,
+            nav: true,
+            navText: ['<i class="fa-solid fa-chevron-left"></i>', '<i class="fa-solid fa-chevron-right"></i>'],
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 1,
+                },
+                800: {
+                    items: 2
+                },
+                1000: {
+                    items: 3,
+                },
+                1200: {
+                    items: 4,
+                }
+            },
+        });
     });
 </script>

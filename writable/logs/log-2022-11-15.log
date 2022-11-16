@@ -1,0 +1,585 @@
+ERROR - 2022-11-15 21:55:40 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:' at line 4 in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `mst_pro...', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mst_pro...')
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mst_pro...')
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT `mst_pro...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(64): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-11-15 21:55:40 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:', [...], false)
+ 5 APPPATH\Models\ProfileModel.php(64): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 6 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-15 21:55:47 --> syntax error, unexpected token "=", expecting "]"
+in APPPATH\Models\ProfileModel.php on line 64.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\ProfileModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\ProfileModel')
+ 3 APPPATH\Controllers\FrontProfil.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\ProfileModel')
+ 4 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\FrontProfil->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-15 21:56:38 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:' at line 4 in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `mst_pro...', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mst_pro...')
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mst_pro...')
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `mst_pro...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-11-15 21:56:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:', [...], false)
+ 5 APPPATH\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-15 22:07:51 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4 in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `mst_pro...', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mst_pro...')
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mst_pro...')
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `mst_pro...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-11-15 22:07:51 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 APPPATH\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-15 22:07:53 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4 in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `mst_pro...', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mst_pro...')
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mst_pro...')
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `mst_pro...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-11-15 22:07:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 APPPATH\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-15 22:08:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4 in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-11-15 22:08:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 APPPATH\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-15 22:08:43 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4 in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `mst_pro...', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mst_pro...')
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mst_pro...')
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `mst_pro...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-11-15 22:08:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 APPPATH\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-15 22:09:23 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::getResult()
+in APPPATH\Models\ProfileModel.php on line 67.
+ 1 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-15 22:09:43 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4 in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `mst_pro...', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mst_pro...')
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mst_pro...')
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `mst_pro...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(67): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-11-15 22:09:43 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 APPPATH\Models\ProfileModel.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-15 22:10:41 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4 in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `mst_pro...', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mst_pro...')
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mst_pro...')
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `mst_pro...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-11-15 22:10:41 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 APPPATH\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-15 22:11:12 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4 in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `mst_pro...', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mst_pro...')
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mst_pro...')
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `mst_pro...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-11-15 22:11:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_produk`.`id_profile` = `mst_profile`.`id`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 APPPATH\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-15 22:12:47 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4 in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `mst_pro...', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mst_pro...')
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mst_pro...')
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `mst_pro...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-11-15 22:12:47 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_profile`.`id` = `mst_produk`.`id_profile`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_profile`.`id` = `mst_produk`.`id_profile`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_profile`.`id` = `mst_produk`.`id_profile`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_profile`.`id` = `mst_produk`.`id_profile`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 APPPATH\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-15 22:15:20 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4 in C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\CIProfil\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `mst_pro...', 0)
+#1 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mst_pro...')
+#2 C:\xampp\htdocs\CIProfil\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mst_pro...')
+#3 C:\xampp\htdocs\CIProfil\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `mst_pro...', Array, false)
+#4 C:\xampp\htdocs\CIProfil\app\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CIProfil\app\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+#6 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+#7 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+#8 C:\xampp\htdocs\CIProfil\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CIProfil\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CIProfil\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-11-15 22:15:20 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_profile`.`id` = `mst_produk`.`id_profile`
+WHERE 0 = :0:
+AND 1 = :1:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_profile`.`id` = `mst_produk`.`id_profile`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_profile`.`id` = `mst_produk`.`id_profile`
+WHERE 0 = :0:
+AND 1 = :1:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `mst_profile`.*, `mst_produk`.*
+FROM `mst_profile`
+JOIN `mst_produk` ON `mst_profile`.`id` = `mst_produk`.`id_profile`
+WHERE 0 = :0:
+AND 1 = :1:', [...], false)
+ 5 APPPATH\Models\ProfileModel.php(65): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\FrontProfil.php(37): App\Models\ProfileModel->getAll('74')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-15 22:28:02 --> Undefined variable $logo
+in APPPATH\Views\front\profil\detail.php on line 13.
+ 1 APPPATH\Views\front\profil\detail.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $logo', 'APPPATH\\Views\\front\\profil\\detail.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(55): view('front/profil/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-15 22:28:51 --> Undefined variable $getProdil
+in APPPATH\Views\front\profil\detail.php on line 13.
+ 1 APPPATH\Views\front\profil\detail.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getProdil', 'APPPATH\\Views\\front\\profil\\detail.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(55): view('front/profil/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-15 22:29:52 --> Undefined variable $getProfil
+in APPPATH\Views\front\profil\detail.php on line 13.
+ 1 APPPATH\Views\front\profil\detail.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getProfil', 'APPPATH\\Views\\front\\profil\\detail.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(55): view('front/profil/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-15 22:33:02 --> Undefined variable $getProfil
+in APPPATH\Views\front\profil\detail.php on line 13.
+ 1 APPPATH\Views\front\profil\detail.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getProfil', 'APPPATH\\Views\\front\\profil\\detail.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(57): view('front/profil/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-15 22:34:53 --> Undefined variable $getProfil
+in APPPATH\Views\front\profil\detail.php on line 13.
+ 1 APPPATH\Views\front\profil\detail.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getProfil', 'APPPATH\\Views\\front\\profil\\detail.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(57): view('front/profil/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-15 22:35:11 --> Undefined variable $getProfil
+in APPPATH\Views\front\profil\detail.php on line 13.
+ 1 APPPATH\Views\front\profil\detail.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getProfil', 'APPPATH\\Views\\front\\profil\\detail.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(57): view('front/profil/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-15 22:41:49 --> Undefined variable $logo
+in APPPATH\Views\front\profil\detail.php on line 13.
+ 1 APPPATH\Views\front\profil\detail.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $logo', 'APPPATH\\Views\\front\\profil\\detail.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(57): view('front/profil/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

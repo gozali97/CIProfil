@@ -70,7 +70,7 @@
                                     <a href="<?= base_url('/profil') ?>" aria-label="Toggle navigation">Profil</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="<?= base_url('/front/product') ?>" aria-label="Toggle navigation">Katalog</a>
+                                    <a href="<?= base_url('/product') ?>" aria-label="Toggle navigation">Katalog</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="contact.html" aria-label="Toggle navigation">Contact Us</a>
