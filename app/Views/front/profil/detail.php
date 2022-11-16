@@ -39,35 +39,38 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-md-6 col-12">
-                <!-- Start Single Product -->
-                <div class="single-product">
-                    <div class="product-image">
-                        <img src="" alt="#">
-                        <div class="button">
-                            <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
+            <?php foreach ($profil as $p) : ?>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Start Single Product -->
+                    <div class="single-product">
+                        <div class="product-image" style="height: 220px; width: 100%; margin-left: auto; margin-right: auto;">
+                            <img src="<?= $p['foto'] ?>" alt="#" style="width: 90%; position: relative; max-height: 220px">
+                            <div class="button">
+                                <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category"><?= $p['kode'] ?></span>
+                            <h4 class="title">
+                                <a href="product-grids.html"><?= $p['nama'] ?></a>
+                            </h4>
+                            <!-- <ul class="review">
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star-filled"></i></li>
+                                <li><i class="lni lni-star"></i></li>
+                                <li><span>4.0 Review(s)</span></li>
+                            </ul> -->
+                            <span class="category mt-2" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><?= $p['deskripsi'] ?></span>
+                            <div class="price">
+                                <span>Rp. <?= number_format($p['harga'], 0, '', '.') ?></span>
+                            </div>
                         </div>
                     </div>
-                    <div class="product-info">
-                        <span class="category">Watches</span>
-                        <h4 class="title">
-                            <a href="product-grids.html">Xiaomi Mi Band 5</a>
-                        </h4>
-                        <ul class="review">
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star-filled"></i></li>
-                            <li><i class="lni lni-star"></i></li>
-                            <li><span>4.0 Review(s)</span></li>
-                        </ul>
-                        <div class="price">
-                            <span>$199.00</span>
-                        </div>
-                    </div>
+                    <!-- End Single Product -->
                 </div>
-                <!-- End Single Product -->
-            </div>
+            <?php endforeach; ?>
         </div>
         <div class="pagination center">
             <ul class="pagination-list">

@@ -583,3 +583,23 @@ in APPPATH\Views\front\profil\detail.php on line 13.
  8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-15 22:49:08 --> Undefined variable $logo
+in APPPATH\Views\front\profil\detail.php on line 13.
+ 1 APPPATH\Views\front\profil\detail.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $logo', 'APPPATH\\Views\\front\\profil\\detail.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\profil\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('front/profil/detail', [], true)
+ 5 APPPATH\Controllers\FrontProfil.php(57): view('front/profil/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('74')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-15 23:55:41 --> Undefined array key "produk"
+in APPPATH\Controllers\FrontProfil.php on line 56.
+ 1 APPPATH\Controllers\FrontProfil.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "produk"', 'APPPATH\\Controllers\\FrontProfil.php', 56)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\FrontProfil->detail('5')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FrontProfil))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

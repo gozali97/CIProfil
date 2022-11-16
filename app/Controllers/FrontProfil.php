@@ -53,7 +53,8 @@ class FrontProfil extends BaseController
                 'desa' => $row->desa,
             ];
         }
-
-        echo View('front/profil/detail', [$data, $getProfil]);
+        $data['profil'] = $getProfil;
+        // dd($data['profil']);
+        echo View('front/profil/detail', $data);
     }
 }
