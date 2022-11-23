@@ -26,7 +26,7 @@
                         <div class="product-info">
                             <!-- <span class="category">Watches</span> -->
                             <h4 class="title">
-                                <a href="product-grids.html"><?= $p['nama'] ?></a>
+                                <a href="<?= base_url('/produk/detail/' . $p['id']) ?>"><?= $p['nama'] ?></a>
                             </h4>
                             <ul class="review">
                                 <li><i class="lni lni-star-filled"></i></li>

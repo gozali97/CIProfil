@@ -5,7 +5,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-3 col-md-3 col-7">
                     <!-- Start Header Logo -->
-                    <a class="navbar-brand logo-bumdes nav-logo" href="index.html">
+                    <a class="navbar-brand logo-bumdes nav-logo" href="<?= base_url('/') ?>">
                         <img src="https://bumdes.id/id/public/assets/home/img/bumdes.svg" alt="Logo">
                     </a>
                     <!-- End Header Logo -->
@@ -37,8 +37,8 @@
                         <div class="navbar-cart">
                             <div>
                                 <!-- Start Header Logo -->
-                                <a class="navbar-brand logo-bumdes nav-logo" href="index.html">
-                                    <img class="ms-3" src="https://seeklogo.com/images/K/kemendesa-logo-8698B6D63A-seeklogo.com.png" alt="Logo" height="40 px">
+                                <a class="navbar-brand logo-bumdes nav-logo" href="<?= base_url('/') ?>">
+                                    <img class="ms-3" src="https://bumdes.id/id/public/assets/home/img/bumdes.svg" alt="Logo" height="40 px">
                                 </a>
                                 <!-- End Header Logo -->
                             </div>
@@ -109,9 +109,10 @@
                         </a>
                     </div>
                     <div class="cart-items">
+
                         <a href="javascript:void(0)" class="main-btn">
                             <i class="lni lni-cart"></i>
-                            <span class="total-items">2</span>
+                            <span class="total-items"></span>
                         </a>
                         <!-- Shopping Item -->
                         <div class="shopping-item">
@@ -125,21 +126,10 @@
                                     <div class="cart-img-head">
                                         <a class="cart-img" href="product-details.html"><img src="{{ asset('front/assets/images/header/cart-items/item1.jpg') }}" alt="#"></a>
                                     </div>
-
                                     <div class="content">
                                         <h4><a href="product-details.html">
                                                 Apple Watch Series 6</a></h4>
                                         <p class="quantity">1x - <span class="amount">$99.00</span></p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" class="remove" title="Remove this item"><i class="lni lni-close"></i></a>
-                                    <div class="cart-img-head">
-                                        <a class="cart-img" href="product-details.html"><img src="{{ asset('front/assets/images/header/cart-items/item2.jpg') }}" alt="#"></a>
-                                    </div>
-                                    <div class="content">
-                                        <h4><a href="product-details.html">Wi-Fi Smart Camera</a></h4>
-                                        <p class="quantity">1x - <span class="amount">$35.00</span></p>
                                     </div>
                                 </li>
                             </ul>

@@ -51,6 +51,6 @@ class FrontProduct extends ResourceController
         }
 
 
-        echo View('admin/product/edit', $data);
+        echo View('front/product_detail', $data);
     }
 }

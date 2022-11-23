@@ -9,6 +9,7 @@
 <section class="trending-product section" style="margin-top: 12px;">
     <div class="container">
         <div class="row">
+
             <div class="col-6">
                 <div class="section-title">
                     <h2>Profil Bumdes</h2>
@@ -90,18 +91,25 @@
         <div class="row">
             <?php foreach ($productPager as $product) : ?>
                 <div class="col-lg-3 col-md-6 col-12">
+                    <?php
+                    echo form_open('home/add');
+                    echo form_hidden('id', $product['id']);
+                    echo form_hidden('nama', $product['nama']);
+                    echo form_hidden('harga', $product['harga']);
+                    echo form_hidden('foto', $product['foto']);
+                    ?>
                     <!-- Start Single Product -->
                     <div class="single-product">
                         <div class="product-image" style="height: 220px; width: 100%; margin-left: auto; margin-right: auto;">
                             <img src="<?= $product['foto']; ?>" alt="#" style="width: 90%; position: relative; max-height: 220px">
                             <div class="button">
-                                <a href="product-details.html" class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
+                                <button type="submit" class="btn"><i class="lni lni-cart"></i> Add to Cart</button>
                             </div>
                         </div>
                         <div class="product-info">
                             <!-- <span class="category">Watches</span> -->
                             <h4 class="title">
-                                <a href="product-grids.html"><?= $product['nama']; ?></a>
+                                <a href="<?= base_url('/produk/detail/' . $product['id']) ?>"><?= $product['nama']; ?></a>
                             </h4>
                             <ul class="review">
                                 <li><i class="lni lni-star-filled"></i></li>
@@ -116,6 +124,7 @@
                             </div>
                         </div>
                     </div>
+                    <?php echo form_close(); ?>
                     <!-- End Single Product -->
                 </div>
             <?php endforeach; ?>

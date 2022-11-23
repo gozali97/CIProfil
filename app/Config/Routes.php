@@ -85,8 +85,12 @@ $routes->get('/admin/product/hapus/(:num)', 'Product::hapus/$1', ['filter' => 'a
 //Frontend
 
 $routes->get('/product', 'FrontProduct::index');
+$routes->get('/home/cek', 'Home::cek');
+$routes->post('/home/add', 'Home::add');
+$routes->get('/home/clear', 'Home::clear');
 $routes->get('/profil', 'FrontProfil::index');
 $routes->get('/profil/detail/(:num)', 'FrontProfil::detail/$1');
+$routes->get('/produk/detail/(:num)', 'FrontProduct::detail/$1');
 
 
 // $routes->group('dashboard', static function ($routes) {

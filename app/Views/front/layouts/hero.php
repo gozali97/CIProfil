@@ -1,13 +1,21 @@
 <section class="hero-area">
     <div class="container">
         <div class="row">
+            <div class="col-lg-12">
+                <?php
+                if (session()->getFlashdata('pesan')) {
+                    echo '<div class="alert alert-success alert-dismissible fade show" role="alert">';
+                    echo session()->getFlashdata('pesan');
+                    echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+                }
+                ?>
+            </div>
             <div class="col-lg-12 col-12 custom-padding-right">
                 <div class="slider-head">
                     <!-- Start Hero Slider -->
                     <div class="hero-slider">
                         <!-- Start Single Slider -->
-                        <div class="img single-slider img-fluid"
-                            style="background-image: url(<?= base_url('front/assets/images/hero/Slide1.PNG')?>);">
+                        <div class="img single-slider img-fluid" style="background-image: url(<?= base_url('front/assets/images/hero/Slide1.PNG') ?>);">
                             <div class="content">
                                 <!-- {{-- <h2><span>No restocking fee ($35 savings)</span>
                                     M75 Sport Watch
@@ -22,8 +30,7 @@
                         </div>
                         <!-- End Single Slider -->
                         <!-- Start Single Slider -->
-                        <div class="img single-slider img-fluid"
-                            style="background-image: url(<?= base_url('front/assets/images/hero/Slide2.PNG')?>);">
+                        <div class="img single-slider img-fluid" style="background-image: url(<?= base_url('front/assets/images/hero/Slide2.PNG') ?>);">
                             <div class="content">
                                 <!-- {{-- <h2><span>Big Sale Offer</span>
                                     Get the Best Deal on CCTV Camera
@@ -38,8 +45,7 @@
                         </div>
                         <!-- End Single Slider -->
                         <!-- Start Single Slider -->
-                        <div class="img single-slider img-fluid"
-                            style="background-image: url(<?= base_url('front/assets/images/hero/Slide3.PNG')?>);">
+                        <div class="img single-slider img-fluid" style="background-image: url(<?= base_url('front/assets/images/hero/Slide3.PNG') ?>);">
                             <div class="content">
                                 <!-- {{-- <h2><span>Big Sale Offer</span>
                                     Get the Best Deal on CCTV Camera
@@ -60,9 +66,9 @@
             <!-- {{-- <div class="col-lg-4 col-12">
                 <div class="row">
                     <div class="col-lg-12 col-md-6 col-12 md-custom-padding"> -->
-                        <!-- Start Small Banner -->
-                        <!-- <div class="hero-small-banner"
-                            style="background-image: url('<?= base_url('front/assets/images/hero/slider-bnr.jpg')?>');">
+            <!-- Start Small Banner -->
+            <!-- <div class="hero-small-banner"
+                            style="background-image: url('<?= base_url('front/assets/images/hero/slider-bnr.jpg') ?>');">
                             <div class="content">
                                 <h2>
                                     <span>New line required</span>
@@ -71,11 +77,11 @@
                                 <h3>$259.99</h3>
                             </div>
                         </div> -->
-                        <!-- End Small Banner -->
-                    <!-- </div>
+            <!-- End Small Banner -->
+            <!-- </div>
                     <div class="col-lg-12 col-md-6 col-12"> -->
-                        <!-- Start Small Banner -->
-                        <!-- <div class="hero-small-banner style2">
+            <!-- Start Small Banner -->
+            <!-- <div class="hero-small-banner style2">
                             <div class="content">
                                 <h2>Weekly Sale!</h2>
                                 <p>Saving up to 50% off all online store items this week.</p>
@@ -84,8 +90,8 @@
                                 </div>
                             </div>
                         </div> -->
-                        <!-- Start Small Banner -->
-                    <!-- </div>
+            <!-- Start Small Banner -->
+            <!-- </div>
                 </div>
             </div> --}} -->
         </div>
